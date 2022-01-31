@@ -20,12 +20,14 @@
                     <a :href="cardInfo.scryfall_uri" target="_blank" alt="">
                       {{ cardInfo.name }}
                     </a>
+                    <br v-if="!cardInfo.name" />
                     <img
                       v-bind:src="user.profile_picture"
                       alt=""
                       id="profile-pic"
                       class="img-fluid centered-element rounded"
                     />
+                    <br v-if="!cardInfo.name" />
                     <div v-if="cardInfo.name">
                       <span style="font-style: italic"
                         >Artist: {{ cardInfo.artist }}</span

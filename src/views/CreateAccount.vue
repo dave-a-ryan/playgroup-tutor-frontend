@@ -20,13 +20,15 @@
               <div class="row">
                 <div class="col-12 mb-3">
                   <form v-on:submit.prevent="scryfallSearch(scryfallNameField)">
-                    <div class="section-title">
+                    <div class="section-title" style="padding: 0px">
                       <h3><strong>Profile Picture</strong></h3>
                     </div>
                     <div>
                       <a :href="cardInfo.scryfall_uri" target="_blank" alt="">
                         {{ cardInfo.name }}
                       </a>
+                      <br v-if="!cardInfo.name" />
+
                       <img
                         :src="inputParams.profile_picture"
                         class="img-fluid centered-element rounded"
@@ -38,6 +40,7 @@
                           >Artist: {{ cardInfo.artist }}</span
                         >
                       </div>
+                      <br v-if="!cardInfo.name" />
                     </div>
                     <br />
                     <div>
