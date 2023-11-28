@@ -1,5 +1,3 @@
-# playgroup-tutor-frontend
-
 ## Project setup
 ```
 npm install
